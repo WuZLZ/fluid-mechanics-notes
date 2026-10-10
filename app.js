@@ -108,7 +108,7 @@
   }
   function questionCard(n,query){
     const p=palette(n.chapter),card=element("article","qa-card");
-    card.id="note-"+n.id;
+    card.id=(query?"search-note-":"note-")+n.id;
     card.style.setProperty("--qtint",p.tint);
     card.style.setProperty("--qcolor",p.deep);
     const top=element("div","question-line");
@@ -169,6 +169,7 @@
   }
   function renderSearch(){
     const q=state.query.trim(),active=q.length>0;
+    document.body.classList.toggle("is-searching",active);
     $("search-results").hidden=!active;
     $("chapters-section").hidden=active;
     $("recents-section").hidden=active;
@@ -196,7 +197,7 @@
   function setFast(next){
     state.fast=!!next;document.body.classList.toggle("fast",state.fast);
     const btn=$("fast-toggle");btn.setAttribute("aria-pressed",String(state.fast));btn.textContent=state.fast?"退出速答":"⚡ 课堂速答";
-    if(state.fast&&!state.query){state.selected="连续性方程";renderExplorer();}
+    if(state.fast&&!state.query&&state.loaded){renderExplorer();}
     safeStore("fm-fast-v3",state.fast?"1":"0");
     $("fast-status").textContent=state.fast?"速答模式已开启 · 精简图文，优先显示答案":"输入关键词，直接定位答案";
     if(state.fast){go("search-zone");$("search-input").focus({preventScroll:true})}
@@ -238,8 +239,8 @@
     document.querySelectorAll("[data-nav]").forEach(btn=>btn.addEventListener("click",()=>{
       const route=btn.dataset.nav;
       if(route==="search"){$("search-input").focus();go("search-zone");}
-      else if(route==="catalog"){state.query="";input.value="";renderSearch();go("chapters-section");}
-      else if(route==="recent"){state.query="";input.value="";renderSearch();go("recents-section");}
+      else if(route==="catalog"){if(state.fast)setFast(false);state.query="";input.value="";renderSearch();go("chapters-section");}
+      else if(route==="recent"){if(state.fast)setFast(false);state.query="";input.value="";renderSearch();go("recents-section");}
       else{state.query="";input.value="";renderSearch();go("explore-section");}
       document.querySelectorAll("[data-nav]").forEach(b=>b.classList.toggle("active",b===btn));
     }));
