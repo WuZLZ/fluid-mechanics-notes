@@ -1,0 +1,20 @@
+{
+  "name": "流体力学课堂速查 · Fluid Atlas",
+  "short_name": "流体速查",
+  "description": "课堂知识点速查，简洁定义、专业公式与流动示意。",
+  "lang": "zh-CN",
+  "start_url": "/fluid-mechanics-notes/",
+  "scope": "/fluid-mechanics-notes/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f8fc",
+  "theme_color": "#172746",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
