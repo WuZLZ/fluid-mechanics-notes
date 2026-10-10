@@ -247,4 +247,5 @@
     window.addEventListener("scroll",()=>{$("search-zone").classList.toggle("stuck",window.scrollY>240)},{passive:true});
   }
   bind();setFast(safeRead("fm-fast-v3")==="1");load();
+  if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}
 })();
