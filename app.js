@@ -228,7 +228,7 @@
   }
   function bind(){
     const input=$("search-input");
-    input.addEventListener("input",()=>{state.query=input.value;renderSearch();if(state.query)go("search-zone")});
+    input.addEventListener("input",()=>{state.query=input.value;renderSearch()});
     input.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();const first=$("result-list").querySelector(".qa-card");first?.scrollIntoView({behavior:"smooth",block:"start"});}if(e.key==="Escape"){input.value="";state.query="";renderSearch();input.blur();}});
     $("clear-search").onclick=()=>{input.value="";state.query="";renderSearch();input.focus();};
     $("fast-toggle").onclick=()=>setFast(!state.fast);
