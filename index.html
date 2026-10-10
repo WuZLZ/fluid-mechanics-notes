@@ -1,7 +1,145 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f8f5"><title>流体力学 · 课堂速查</title><style>
-:root{--ink:#19343d;--muted:#788990;--line:#e6ebe8;--paper:#fff;--bg:#f7f8f5;--accent:#528b80}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 system-ui,-apple-system,"Microsoft YaHei",sans-serif}button,input{font:inherit}button{cursor:pointer}.shell{max-width:1160px;margin:auto;padding:0 22px}.top{background:#fcfdfb;border-bottom:1px solid #e6ebe7}.top .shell{min-height:115px;padding-top:19px;padding-bottom:16px}.kicker{font-size:11px;letter-spacing:.16em;color:#65847e;font-weight:800}.titlebar{display:flex;justify-content:space-between;align-items:center;margin-top:6px}h1{font-size:30px;letter-spacing:-.045em;line-height:1.25;margin:0;font-weight:760}.top-meta{font-size:12px;color:#88979a}.subtitle{font-size:12px;color:#8a989a;margin:8px 0 0}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:34px;margin-top:27px}.left{position:sticky;top:18px;align-self:start}.search-wrap{position:relative}.search-wrap input{width:100%;padding:17px 18px 17px 47px;outline:none;background:white;border:1px solid #e2e9e5;border-radius:15px;box-shadow:0 5px 20px #244d4210}.search-wrap input:focus{border-color:#77a99f;box-shadow:0 0 0 3px #dbefeb}.search-icon{position:absolute;left:17px;top:7px;font-size:29px;color:#659288}.s-head{margin:30px 0 14px;display:flex;align-items:baseline;justify-content:space-between}.s-head h2{font-size:20px;margin:0}.s-head span{color:#899797;font-size:12px}.chapter{width:100%;border:1px solid #e8e9e5;border-radius:16px;background:#f0f2ed;margin:0 0 11px;overflow:hidden;text-align:left;transition:transform .15s,box-shadow .15s}.chapter:focus-within,.chapter:hover{box-shadow:0 6px 15px #274b4010}.chap-top{width:100%;padding:17px 19px 15px;border:0;background:transparent;text-align:left;color:var(--ink)}.chap-top .no{color:#5d897f;font-size:12px;font-weight:800;margin-right:8px}.chap-top .count{float:right;font-size:11px;color:#82918f}.chap-name{font-size:17px;font-weight:750;margin:5px 0 2px}.chap-sub{font-size:11px;color:#758786}.chapter:nth-child(3n+2){background:#eff1f4}.chapter:nth-child(3n+3){background:#f4f0ec}.chap-links{padding:2px 10px 12px;display:none}.chapter.open .chap-links{display:block}.chap-links a{display:block;padding:9px 12px;border-radius:9px;text-decoration:none;font-size:13px;line-height:1.45;color:#425a61}.chap-links a:hover,.chap-links a:focus{background:#ffffffb8}.detail-head{padding:2px 0 17px;display:flex;justify-content:space-between;align-items:end;gap:12px;border-bottom:1px solid var(--line);margin-bottom:18px}.detail-head h2{font-size:23px;letter-spacing:-.03em;margin:0}.detail-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.status{color:#91a1a2;font-size:12px}.refresh{background:white;border:1px solid var(--line);border-radius:9px;color:#567d78;padding:6px 12px;font-size:12px}.filter{display:flex;gap:7px;overflow:auto;scrollbar-width:none;margin-bottom:20px;padding-bottom:4px}.filter::-webkit-scrollbar{display:none}.pill{white-space:nowrap;border-radius:999px;border:1px solid #e0e8e3;background:#fff;color:#708382;padding:7px 14px;font-size:12px}.pill.active{background:var(--ink);color:#fff;border-color:var(--ink)}.section-title{font-size:13px;font-weight:750;color:#6c8882;margin:28px 0 10px}.note{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px 22px;margin-bottom:12px;scroll-margin-top:20px}.note:target{border-color:#7db2a5;box-shadow:0 0 0 3px #d8eae4}.note .eyebrow{font-size:10px;letter-spacing:.14em;color:#92a4a0;font-weight:700}.note h3{font-size:18px;margin:6px 0 11px;line-height:1.45}.answer{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.85;color:#354e55;border-left:3px solid var(--accent);padding-left:13px;font-size:14px}.date{font-size:11px;color:#9aa9a8;margin-top:12px}.empty{background:white;border:1px solid var(--line);padding:30px;border-radius:15px;color:#7c9690}.foot{color:#9baaa5;font-size:11px;padding:18px 0 35px}.updates{display:flex;align-items:center;gap:8px;justify-content:flex-end;margin-top:8px}.mobile-nav{display:none}
-@media(max-width:750px){.shell{padding:0 18px}.top .shell{min-height:107px;padding-top:16px}.titlebar h1{font-size:27px}.layout{display:block;margin-top:16px}.left{position:static}.s-head{margin:22px 0 12px}.chapter{margin-bottom:9px}.chap-top{padding:13px 17px}.chap-name{font-size:16px}.chap-sub{font-size:12px}.detail-head{margin-top:23px}.detail-head h2{font-size:21px}.note{padding:16px}.note h3{font-size:16px}.answer{font-size:14px}.filter{margin-bottom:13px}.chapter.open .chap-links{max-height:200px;overflow:auto}.top-meta{font-size:11px}}
-@media print{.left,.filter,.refresh,.updates{display:none}.layout{display:block}.note{break-inside:avoid}}
-</style></head><body><header class="top"><div class="shell"><div class="kicker">FM / NOTEBOOK</div><div class="titlebar"><h1>流体力学</h1><span class="top-meta" id="header-count">课堂速查</span></div><p class="subtitle">一条一个知识点，老师提问直接查。</p></div></header><div class="shell layout"><aside class="left"><div class="search-wrap"><span class="search-icon">⌕</span><input id="search" placeholder="搜索定义、关键词、公式…" aria-label="搜索知识点"></div><div class="s-head"><h2>知识目录</h2><span>按章节快速定位</span></div><nav id="nav"></nav></aside><main class="right"><div class="detail-head"><div><h2>课堂知识速查</h2><p>核心定义 · 必要公式 · 简洁解释</p></div><button id="refresh" class="refresh">刷新</button></div><div class="filter" id="filters"></div><div id="content"></div><div class="foot" id="status">正在读取笔记…</div></main></div><script>
-(()=>{'use strict';const $=x=>document.getElementById(x);let notes=[];let selected='全部';const keys=['基础概念','流体黏性','流体静力学','流体运动的描述','欧拉法基本概念','连续性方程'];const subs={'基础概念':'研究方法 · 流体受力 · 物理性质','流体黏性':'黏度 · 内摩擦','流体静力学':'压强 · 真空度','流体运动的描述':'欧拉法 · 加速度','欧拉法基本概念':'恒定流 · 流线 · 迹线','连续性方程':'质量守恒 · 基本公式'};function el(t,cls,s){const a=document.createElement(t);if(cls)a.className=cls;if(s!==undefined)a.textContent=s;return a}function fmt(s){const d=new Date(s+'T12:00:00');const weeks=['周日','周一','周二','周三','周四','周五','周六'];return (d.getMonth()+1)+'月'+d.getDate()+'日 '+weeks[d.getDay()]}function render(){let q=$('search').value.trim().toLowerCase();let full=notes.filter(n=>(n.title+' '+n.chapter+' '+n.content+' '+(n.keywords||'')).toLowerCase().includes(q));let filtered=full.filter(n=>selected==='全部'||n.chapter===selected);$('header-count').textContent=notes.length+' 条课堂知识';const nav=$('nav');nav.replaceChildren();let activeIndex=0;for(const name of keys){const matches=full.filter(n=>n.chapter===name);if(!matches.length)continue;const group=el('div','chapter'+((selected===name||q)?' open':''));const btn=el('button','chap-top');btn.type='button';btn.append(el('span','no',String(++activeIndex).padStart(2,'0')));btn.append(el('span','count',matches.length+' 条'));group.append(btn);btn.append(el('div','chap-name',name),el('div','chap-sub',subs[name]||''));const links=el('div','chap-links');for(const n of matches){const a=el('a',null,n.title);a.href='#'+n.id;a.onclick=()=>{if(selected!=='全部'&&selected!==n.chapter){selected=n.chapter;render()}};links.append(a)}btn.onclick=()=>group.classList.toggle('open');group.append(links);nav.append(group)}const filters=$('filters');filters.replaceChildren();for(const name of ['全部',...keys]){if(name!=='全部'&&!full.some(n=>n.chapter===name))continue;const pill=el('button','pill'+(selected===name?' active':''),name);pill.onclick=()=>{selected=name;render()};filters.append(pill)}let list=$('content');list.replaceChildren();let num=0;for(const name of keys){const section=filtered.filter(n=>n.chapter===name);if(!section.length)continue;list.append(el('div','section-title',name+' · '+section.length+' 条'));for(const n of section){const box=el('article','note');box.id=n.id;box.append(el('div','eyebrow','KNOWLEDGE  '+String(++num).padStart(2,'0')),el('h3',null,n.title),el('div','answer',n.content),el('div','date','新增 '+fmt(n.createdAt)+(n.updatedAt!==n.createdAt?' · 更新 '+fmt(n.updatedAt):'')));list.append(box)}}if(!filtered.length)list.append(el('div','empty','没有匹配的知识点。'))}async function load(){const button=$('refresh');button.disabled=true;$('status').textContent='检查更新中…';try{const r=await fetch('./notes.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(!Array.isArray(d.notes))throw Error('笔记格式错误');notes=d.notes.filter(n=>typeof n.chapter==='string'&&typeof n.title==='string'&&typeof n.content==='string'&&typeof n.createdAt==='string');render();$('status').textContent='已同步 '+notes.length+' 条知识点 · '+new Date().toLocaleTimeString('zh-CN')}catch(e){$('status').textContent='同步失败：'+e.message}finally{button.disabled=false}}$('search').oninput=()=>{selected='全部';render()};$('refresh').onclick=load;load()})();
-</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="流体力学课堂速查：只收录课堂高频知识点，按章节检索，一句话回答老师的提问。">
+  <title>Fluid Atlas · 流体力学课堂速查</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script defer src="app.js?v=3"></script>
+</head>
+<body>
+  <header class="wrap mast">
+    <a href="./" class="brand" aria-label="流体力学课堂速查首页">
+      <span class="brand-icon" aria-hidden="true">≈</span>
+      <span>FLUID ATLAS <small>CLASSROOM NOTES</small></span>
+    </a>
+    <div class="header-right">
+      <span class="online-dot" aria-hidden="true"></span>
+      <span class="mast-status">持续更新中</span>
+      <a class="ghost" href="#chapters-section">知识目录 ↗</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span aria-hidden="true">●</span> FLUID MECHANICS / LEARN & RECALL</div>
+        <h1>让知识流动，<br><em>让回答更快。</em></h1>
+        <p>这不是教材仓库。老师随时提问，一搜就有简洁答案、关键公式和专业示意图。</p>
+        <div class="hero-bottom">
+          <strong id="hero-total">课堂知识持续整理</strong>
+          <span class="hero-pip"></span>
+          <span>只保留课堂重点</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 475 238" role="img" aria-label="收缩管道流线示意">
+          <defs>
+            <linearGradient id="tube-shade" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#3176b5" stop-opacity=".12"/>
+              <stop offset=".6" stop-color="#54d6e0" stop-opacity=".20"/>
+              <stop offset="1" stop-color="#5b91ca" stop-opacity=".12"/>
+            </linearGradient>
+          </defs>
+          <path class="hero-light" d="M15 43H113Q160 43 216 87T332 94H461V147H332Q271 153 216 179T113 190H15Z"/>
+          <path d="M15 43H113Q160 43 216 87T332 94H461M15 190H113Q160 190 216 179T332 147H461" class="hero-pipe"/>
+          <path d="M25 77C141 77 197 98 300 107S414 106 451 107" class="hero-flow slow"/>
+          <path d="M25 105C141 105 201 110 300 118S408 118 451 118" class="hero-flow"/>
+          <path d="M25 132C141 132 201 131 300 128S408 129 451 129" class="hero-flow slow"/>
+          <path d="M25 160C141 160 197 147 300 141S414 140 451 140" class="hero-flow"/>
+          <path d="M104 40v153M367 91v60" stroke="#a6c0e3" stroke-width="1.2" stroke-dasharray="5 7" opacity=".63"/>
+          <text class="hero-art-label" x="88" y="29">A₁</text>
+          <text class="hero-art-label" x="352" y="80">A₂</text>
+          <text class="hero-art-label" x="46" y="124">v₁</text>
+          <text class="hero-art-label" x="396" y="117">v₂</text>
+          <text x="222" y="224" text-anchor="middle" fill="#a8d9ee" font-size="13" font-weight="700">A₁v₁ = A₂v₂</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="search-row" id="search-zone" aria-label="搜索课堂知识">
+      <div class="search-panel">
+        <span class="search-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="10.7" cy="10.7" r="6.8" stroke="currentColor" stroke-width="1.9"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
+        <input id="search-input" type="search" autocomplete="off" spellcheck="false" placeholder="搜黏度、静压强、连续性方程…" aria-label="搜索定义、问题和公式">
+        <div class="search-tools">
+          <span class="kbd" aria-hidden="true">ENTER</span>
+          <button id="clear-search" class="clear" type="button" aria-label="清除搜索">×</button>
+          <button id="fast-toggle" class="fast-toggle" type="button" aria-pressed="false">⚡ 课堂速答</button>
+        </div>
+      </div>
+      <div class="quick-hint"><span id="fast-status">输入关键词，直接定位答案</span><span id="search-hint">支持「粘度 / 黏度」近义词</span></div>
+    </section>
+
+    <section id="search-results" class="section search-results" hidden>
+      <div class="section-heading"><div><div class="section-kicker">INSTANT SEARCH</div><h2>搜索结果</h2><p id="result-summary">输入关键词开始检索</p></div></div>
+      <div class="qa-list" id="result-list" aria-live="polite"></div>
+    </section>
+
+    <section id="chapters-section" class="section home-section">
+      <div class="section-heading">
+        <div><div class="section-kicker">EXPLORE THE SUBJECT</div><h2>课程知识目录 <small id="total-count">读取中</small></h2><p>六大知识模块，按颜色区分。点进章节，直接看到问题。</p></div>
+        <button class="link-button" type="button" onclick="document.getElementById('explore-section').scrollIntoView({behavior:'smooth'})">全部知识 ↗</button>
+      </div>
+      <div id="chapter-grid" class="chapter-grid" aria-label="章节目录"></div>
+    </section>
+
+    <section class="home-grid home-section" id="recents-section">
+      <div class="mini-panel">
+        <div class="panel-title"><h3>🗓️ 最近整理</h3><span>按最近更新排列</span></div>
+        <div id="recent-list"></div>
+        <button class="link-button" id="recent-more" type="button">查看全部知识 →</button>
+      </div>
+      <div class="mini-panel featured">
+        <div class="topic-badge">FEATURED / 高频提问</div>
+        <h3>连续性方程<br>究竟是什么意思？</h3>
+        <p>一句话记住：它是质量守恒定律在流体运动中的数学表达式。</p>
+        <button class="featured-cta" type="button" id="featured-open">查看标准回答 ↗</button>
+        <div class="featured-illustration" aria-hidden="true">
+          <svg viewBox="0 0 250 130">
+            <path d="M2 8H65C95 8 103 39 138 39H246M2 126H65C95 126 103 95 138 95H246" fill="none" stroke="#5ea4c7" stroke-width="3.5"/>
+            <path d="M16 68h72M129 68h99" fill="none" stroke="#53b6c0" stroke-width="4" stroke-linecap="round"/>
+            <path d="m74 60 14 8-14 8M214 60l14 8-14 8" fill="none" stroke="#53b6c0" stroke-width="3"/>
+            <circle cx="40" cy="68" r="5" fill="#9a88de"/><circle cx="169" cy="68" r="5" fill="#f29d7c"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore" id="explore-section">
+      <div class="explore-header">
+        <div><div class="section-kicker">READY TO ANSWER</div><h2 id="explore-title">连续性方程</h2><p id="explore-caption">点击章节即可查看核心答案</p></div>
+        <span class="mast-status" id="sync-status">正在读取…</span>
+      </div>
+      <div id="filter-bar" class="explore-toolbar" aria-label="选择知识章节"></div>
+      <div class="explore-layout">
+        <div class="qa-list" id="qa-list"></div>
+        <aside class="side-diagram" aria-label="流体力学专业示意图">
+          <h4 id="diagram-title">专业示意</h4><p>学科示意图与核心公式</p>
+          <div class="diagram-view" id="diagram-view"></div>
+          <p class="diagram-caption" id="diagram-caption"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer"><span>FLUID ATLAS · 课堂速查</span><span id="status-text">正在连接笔记数据…</span></footer>
+
+  <nav class="bottom-nav" aria-label="手机快捷导航">
+    <button type="button" class="active" data-nav="search" aria-label="搜索">
+      <svg fill="none" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.4" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>搜索</span>
+    </button>
+    <button type="button" data-nav="catalog" aria-label="目录">
+      <svg fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/></svg><span>目录</span>
+    </button>
+    <button type="button" data-nav="recent" aria-label="最近更新">
+      <svg fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>最近</span>
+    </button>
+    <button type="button" data-nav="explore" aria-label="知识卡片">
+      <svg fill="none" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>速查</span>
+    </button>
+  </nav>
+</body>
+</html>
